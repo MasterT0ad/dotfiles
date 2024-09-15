@@ -1,0 +1,64 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 24,
+  "spacing": 5,
+  "modules-left": ["custom/arch", "hyprland/workspaces","hyprland/mode","hyprland/window","battery"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu","memory", "idle_inhibitor","pulseaudio","tray"],
+  "font": "Nerd Font Complete Mono, 12",
+  "hyprland/mode": {
+    "format": "{}"
+  },
+  "hyprland/window": {
+    "format": "{title}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "cpu": { 
+    "interval": 10, 
+    "format": ": {usage}%"
+  },
+  "memory": {
+    "interval": 30,
+    "format": ": {used:0.1f}GB"
+  },
+  "clock": {
+    "format": "{:%d/%m/%Y %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "on-click": "gnome-calendar"
+  },
+  "pulseaudio": {
+    "format": "奔 {volume}%",
+    "format-icons": {
+      "default": ["\uf026", "\uf027", "\uf028"]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "format-muted": "婢 {volume}%"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+
+  "custom/arch": {
+    "exec": "echo ''",
+    "interval": 3600,
+    "format": "{}",
+    "tooltip": "Arch Linux",
+    "on-click": "wofi --show drun"
+  }
+  
+}

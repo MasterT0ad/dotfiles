@@ -1,0 +1,6 @@
+[settings]
+font = Fira Code 12
+border = false
+columns = 1
+lines = 10
+hide_on_start = false

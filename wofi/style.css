@@ -1,0 +1,21 @@
+window {
+    background-color: #1e1e2e;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+entry {
+    font: "Fira Code 12";
+    color: #ffffff;
+}
+
+listview {
+    background-color: #262626;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#prompt {
+    font: "Fira Code Bold 12";
+    color: #ffffff;
+}
